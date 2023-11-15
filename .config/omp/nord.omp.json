@@ -1,0 +1,96 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#3b4252",
+          "foreground": "#eceff4",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": " {{ .Icon }} ",
+          "type": "os"
+        },
+        {
+          "background": "#3b4252",
+          "foreground": "#eceff4",
+          "style": "powerline",
+          "template": " {{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "background": "#81a1c1",
+          "foreground": "#eceff4",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "template": " {{ .HostName }} ",
+          "type": "session"
+        },
+        {
+          "background": "#5e81ac",
+          "foreground": "#eceff4",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "powerline",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#ebcb8b",
+          "foreground": "#eceff4",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "branch_icon": "",
+            "fetch_stash_count": true,
+            "fetch_status": false,
+            "fetch_upstream_icon": true
+          },
+          "style": "powerline",
+          "template": " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
+          "type": "git"
+        },
+        {
+          "background": "#a3be8c",
+          "foreground": "#eceff4",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "type": "node"
+        },
+        {
+          "background": "#3b4252",
+          "foreground": "#eceff4",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "style": "diamond",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "\ue0b0",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#ebcb8b",
+          "foreground": "#3b4252",
+          "invert_powerline": true,
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "template": " \ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "trailing_diamond": "\ue0b4",
+          "type": "aws"
+        }
+      ],
+      "type": "rprompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
