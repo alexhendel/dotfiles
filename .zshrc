@@ -1,5 +1,5 @@
-if [ -f "~/.zprofile" ]; then source ~/.zprofile; fi
-if [ -f "~/.aliases" ]; then source ~/.aliases; fi
+if [ -f ~/.zprofile ]; then source ~/.zprofile; fi
+if [ -f ~/.aliases ]; then source ~/.aliases; fi
 
 # Set the directory for zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
