@@ -1,6 +1,14 @@
 # Current Dotfiles
 
-![Screenshot](https://lh3.googleusercontent.com/pw/AP1GczNZdSkheJMQ3yuorfjdtUeB5xC9HYLjVO9p9EceNEnEOoNsPm6LIluKga8Dj15XCL5jyCxnrNrSJ0VFaJulHT5wVnrCyIrBDvvZ-WjRr7iamWbux8v2l40j7eEMtfpiHMMuR1-VXsgE9wZnJtOYLlWw5w=w2384-h1548-s-no?authuser=0)
+Oh-My-Posh Themes:
+
+**Nord**:
+
+![Screenshot_Nord](https://lh3.googleusercontent.com/pw/AP1GczNZdSkheJMQ3yuorfjdtUeB5xC9HYLjVO9p9EceNEnEOoNsPm6LIluKga8Dj15XCL5jyCxnrNrSJ0VFaJulHT5wVnrCyIrBDvvZ-WjRr7iamWbux8v2l40j7eEMtfpiHMMuR1-VXsgE9wZnJtOYLlWw5w=w2384-h1548-s-no?authuser=0)
+
+**Zen**:
+
+![Screenshot_Zen](https://lh3.googleusercontent.com/pw/AP1GczM3aeOs4o13G7g9tQPL87DXfUOV1op_2cNlU3CTTrmE5-z7vlwzUnXqu1JR13xn8yofn7jD1FBS5tJV2mYaqedmc3dYtFLHKG35r5-_9_LFV0rsfoTonKAwNidhwYYZY4AVTHb0WPz7qqFbNiSWlATRCw=w3218-h2090-s-no?authuser=0)
 
 ## Rerquired Packages
 
