@@ -4,4 +4,4 @@ if [[ -f "/opt/homebrew/bin/brew" ]] then
 fi
 
 # Load oh-my-posh with nord theme
-eval "$(oh-my-posh init zsh --config ~/.config/omp/nord.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/omp/zen.omp.toml)"
