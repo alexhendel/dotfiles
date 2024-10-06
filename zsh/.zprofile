@@ -4,7 +4,7 @@ if [[ -f "/opt/homebrew/bin/brew" ]] then
 fi
 
 # amend path
-PATH=$PATH:/home/alex/.local/bin
+PATH=$PATH:$HOME/.local/bin
 
 # Load oh-my-posh theme
 eval "$(oh-my-posh init zsh --config ~/.config/omp/zen.omp.toml)"
