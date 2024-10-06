@@ -20,15 +20,16 @@ This setup requires a few packages you may install using your preferred package 
 - `fzf`
 - `neovim`
 - `zoxide`
+- `curl`
 - `stow`
 - [oh-my-posh](https://ohmyposh.dev/docs/installation/linux)
 
 ```bash
 # Install packages on Fedora (41+)
-sudo dnf install -y git zsh eza fzf neovim stow zoxide
+sudo dnf install -y git zsh eza fzf neovim curl stow zoxide
 
 # Install packages on Ubuntu (24.10+)
-sudo apt install -y git zsh eza fzf neovim stow zoxide
+sudo apt install -y git zsh eza fzf neovim curl stow zoxide
 
 # Install / update oh-my-posh
 curl -s https://ohmyposh.dev/install.sh | bash -s
