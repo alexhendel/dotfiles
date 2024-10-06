@@ -8,10 +8,30 @@ This setup requires a few packages you may install using your preferred package 
 
 - `git`
 - `zsh`
-- `exa`
+- `eza`
 - `fzf`
-- `nvim`
-- `oh-my-posh`
+- `neovim`
+- `zoxide`
+- `stow`
+- [oh-my-posh](https://ohmyposh.dev/docs/installation/linux)
+
+```bash
+# Install packages on Fedora (41+)
+sudo dnf install -y git zsh eza fzf neovim stow zoxide
+
+# Install packages on Ubuntu (24.10+)
+sudo apt install -y git zsh eza fzf neovim stow zoxide
+
+# Install / update oh-my-posh
+curl -s https://ohmyposh.dev/install.sh | bash -s
+
+# Clone the repository
+git clone https://github.com/alexhendel/dotfiles.git ~/.dotfiles
+
+# Activate symlinks
+stow -d ~/.dotfiles -t ~ zsh
+stow -d ~/.dotfiles -t ~/.config config
+```
 
 ## Nerd Font
 
