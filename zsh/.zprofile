@@ -3,5 +3,8 @@ if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Load oh-my-posh with nord theme
+# amend path
+PATH=$PATH:/home/alex/.local/bin
+
+# Load oh-my-posh theme
 eval "$(oh-my-posh init zsh --config ~/.config/omp/zen.omp.toml)"
