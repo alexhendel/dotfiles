@@ -1,9 +1,19 @@
-#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-
-version = 2
-final_space = true
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
-palette = {  dark-gray = '#5c6370' }
+version = 3
+final_space = true
+
+[palette]
+  dark-gray = '#5c6370'
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = 'p:dark-gray'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}p:dark-gray{{end}}']
 
 [[blocks]]
   type = 'prompt'
@@ -11,24 +21,26 @@ palette = {  dark-gray = '#5c6370' }
   newline = true
 
   [[blocks.segments]]
+    template = '{{ .Path }}'
+    foreground = 'blue'
+    background = 'transparent'
     type = 'path'
     style = 'plain'
-    background = 'transparent'
-    foreground = 'blue'
-    template = '{{ .Path }}'
 
     [blocks.segments.properties]
+      cache_duration = 'none'
       style = 'full'
 
   [[blocks.segments]]
-    type = 'git'
-    style = 'plain'
+    template = ' {{ .HEAD }}<yellow>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}</> <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
     foreground = 'p:dark-gray'
     background = 'transparent'
-    template = ' {{ .HEAD }}<yellow>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}</> <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    type = 'git'
+    style = 'plain'
 
     [blocks.segments.properties]
       branch_icon = ''
+      cache_duration = 'none'
       commit_icon = '@'
       fetch_status = true
 
@@ -37,13 +49,14 @@ palette = {  dark-gray = '#5c6370' }
   overflow = 'hidden'
 
   [[blocks.segments]]
-    type = 'executiontime'
-    style = 'plain'
+    template = '{{ .FormattedMs }}'
     foreground = 'yellow'
     background = 'transparent'
-    template = '{{ .FormattedMs }}'
+    type = 'executiontime'
+    style = 'plain'
 
     [blocks.segments.properties]
+      cache_duration = 'none'
       threshold = 2000
 
 [[blocks]]
@@ -52,24 +65,11 @@ palette = {  dark-gray = '#5c6370' }
   newline = true
 
   [[blocks.segments]]
+    template = '❯'
+    background = 'transparent'
     type = 'text'
     style = 'plain'
-    foreground_templates = [
-      "{{if gt .Code 0}}red{{end}}",
-      "{{if eq .Code 0}}p:dark-gray{{end}}",
-    ]
-    background = 'transparent'
-    template = '❯'
+    foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}p:dark-gray{{end}}']
 
-[transient_prompt]
-  foreground_templates = [
-    "{{if gt .Code 0}}red{{end}}",
-    "{{if eq .Code 0}}p:dark-gray{{end}}",
-  ]
-  background = 'transparent'
-  template = '❯ '
-
-[secondary_prompt]
-  foreground = 'p:dark-gray'
-  background = 'transparent'
-  template = '❯❯ '
+    [blocks.segments.properties]
+      cache_duration = 'none'

@@ -42,6 +42,14 @@ stow -d ~/.dotfiles -t ~ zsh
 stow -d ~/.dotfiles -t ~/.config config
 ```
 
+## Catppuccin Mocha
+
+The prompt (oh-my-posh), fzf, kitty, tmux and neovim all use Catppuccin Mocha. The tmux theme is a plugin and is not tracked in this repo:
+
+```bash
+git clone -b v2.3.2 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+```
+
 ## Nerd Font
 
 Install a font to display symbols and icons in your prompt.

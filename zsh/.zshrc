@@ -58,6 +58,22 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'exa $realpath'
 
+# fzf: Catppuccin Mocha
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
+--color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#6C7086,label:#CDD6F4"
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# oMLX: CLI shim path begin
+case ":$PATH:" in
+  *":$HOME/.omlx/bin:"*) ;;
+  *) export PATH="$HOME/.omlx/bin:$PATH" ;;
+esac
+
